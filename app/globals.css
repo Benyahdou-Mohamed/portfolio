@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --cursor-size: 28px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #e6e6e1;
+}
+.nav_logo{
+  @apply font-bold text-lg 
+}
+.hero_section{
+  font-weight: 500;
+  @apply font-mono font-bold text-center w-full flex flex-col  justify-center
+}
+.hero_title{
+  @apply md:text-2xl sm:text-base text-8xl 
+}
+
+.page-wrap {
+  background: var(--bg);
+  min-height: 100vh;
+}
+.cursor{
+
+  position: fixed;
+
+  width: 22px;
+
+  height: 22px;
+
+  background-color: rgb(181, 0, 0);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+.about_section{
+  height: 100vh;
+  
+}
+p
+{
+    display:inline;
+}
+h1{
+    display:inline
+}
+.nav_link{
+  display:inline
+}
