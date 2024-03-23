@@ -27,12 +27,14 @@ const Navbar = () => {
             <Link className='' href="/home">
               About
              </Link>
-            <Link className='' href="/home">
+             <div className="">
+        <Link className='gap-4 mr-4' href="/home">
               Project
             </Link>
-            <Link className='nav_link bg-amber-950 text-white rounded-full px-3 py-2' href="/home">
+    <Link className='nav_link bg-amber-950 text-white rounded-full px-3 py-2' href="/home">
               Contact
             </Link>
+            </div>
           </div>
     </div>
         </nav>
