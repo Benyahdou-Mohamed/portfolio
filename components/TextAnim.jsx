@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image'
 import { gsap } from 'gsap';
-
 import { useEffect,useRef } from 'react';
 
 export default function TextAnim() {

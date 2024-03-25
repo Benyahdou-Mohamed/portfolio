@@ -79,3 +79,15 @@ h1 {
   /* background-color: black; */
   @apply text-emerald-950
 }
+.hero_span{
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: yellow;
+  right: 22%;
+  top: 46%;
+  font-size: 18px;
+  transform: rotate(-17deg);
+}
