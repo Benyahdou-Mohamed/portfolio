@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
-
+import SmoothScrolling from "@/components/SmoothScrolling";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
        <Cursor/> 
       
       <Navbar/>
-      
-        {children}</body>
+      <SmoothScrolling>{children}</SmoothScrolling>
+        </body>
     </html>
   );
 }

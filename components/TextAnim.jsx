@@ -4,78 +4,40 @@ import { gsap } from 'gsap';
 import { useEffect,useRef } from 'react';
 
 export default function TextAnim() {
-
-  const firstText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
-  let direction = -1;
-
-
-  useEffect( () => {
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(slider.current, {
-
-      scrollTrigger: {
-
-        trigger: document.documentElement,
-
-        scrub: 0.5,
-
-        start: 0,
-
-        end: window.innerHeight,
-
-        onUpdate: e => direction = e.direction * -1
-
-      },
-
-      x: "-500px",
-
-    })
-
-    requestAnimationFrame(animate);
-
-  }, [])
-
-
-  const animate = () => {
-
-    if(xPercent < -100){
-
-      xPercent = 0;
-
-    }
-
-    else if(xPercent > 0){
-
-      xPercent = -100;
-
-    }
-
-    gsap.set(firstText.current, {xPercent: xPercent})
-
-    gsap.set(secondText.current, {xPercent: xPercent})
-
-    requestAnimationFrame(animate);
-
-    xPercent += 0.1 * direction;
-
-  }
   return (
-    <main >
-      <Image 
-        src="/images/background.jpg"
-        fill={true}
-        alt="background"
-      />
-      <div >
-        <div ref={slider} >
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+    
+      
+    <div className="about2_container ">
+        <div className=" mx-9 pt-5 gap-3 flex flex-row">
+           <h2 className='text_colored text-5xl w-full text-white'>About Me </h2>
+           <h2 className='pt-4 text-white text-2xl'> My name is Benyahdou Mohammed, I’m from Algeria and I have a Bachelor degree in Computer Science.
+            I have started learning about web development in 2020 since then I gained experience in developing UserInterfaces and still looking forward to learn more and grow in this field.
+          </h2>
         </div>
-      </div>
-    </main>
+        <ul id="cards">
+            <li className="card" id="card1">
+                <div className="card-body">
+                    card2
+                </div>
+            </li>
+            <li className="card" id="card2">
+                <div className="card-body">
+                    <h2>Card 2</h2>
+                </div>
+            </li>
+            <li className="card" id="card3">
+                <div className="card-body">
+                    <h2>Card 3</h2>
+                </div>
+            </li>
+            <li className="card" id="card4">
+                <div className="card-body">
+                    <h2>Card 4</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+   
   )
 }

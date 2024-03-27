@@ -10,6 +10,11 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --cursor-size: 28px;
+  --cards: 4;
+	--cardHeight: 87vh;
+	--cardTopPadding: 7em;
+	--cardMargin: 4vw;
+  --tw-bg-opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +26,8 @@
 }
 
 body {
-  background-color: #e6e6e1;
+  
+  background-color: rgb(232 232 227 / var(--tw-bg-opacity));
 }
 .nav_logo{
   @apply font-bold text-lg 
@@ -90,4 +96,77 @@ h1 {
   top: 46%;
   font-size: 18px;
   transform: rotate(-17deg);
+}
+
+/*/anime*/
+
+.about2_container {
+	width: 100%;
+	
+  background-color: black;
+}
+.text_colored{
+  color: rgb(126, 78, 53);
+}
+
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+#card4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+	background-color: #000000;
+}
+#card2 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color: #000000;
+}
+#card3 .card-body {
+	background-color: #000000;
+}
+#card4 .card-body {
+	background-color: #000000;
+}
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	height: var(--cardHeight);
+	display: flex;
+	/* justify-content: center; */
+	/* align-items: center; */
+	transition: all 0.5s;
+  margin: 0 40px;
+  border-top: 2px solid rgb(89, 89, 89);
+}
+
+h2 {
+	font-size: 2.5em;
 }

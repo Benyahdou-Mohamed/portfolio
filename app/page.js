@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"; 
 import Link from "next/link";
 import TextAnim from '@/components/TextAnim'
-import { SparklesCore } from "@/components/ui/Sparkles";
+
 
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       
       <div className="hero_section">
-      <div style={{ }} className="text-5xl md:text-8xl sm:text-9xl text-black mt-48 ">
+      <div style={{ }} className=" text-5xl md:text-8xl sm:text-9xl text-black mt-48 ">
         HI THERE,IM <br/>BENYAHDOU MED
             <span className="hero_span">Web Developer</span>
         </div>
@@ -42,9 +42,9 @@ export default function Home() {
         </Link>
        </div>
       
-       <SparklesCore></SparklesCore>
+       
         <About/>
-        
+        <TextAnim/>
         
     </main>
   );
