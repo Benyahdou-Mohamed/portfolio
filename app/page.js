@@ -1,10 +1,12 @@
 
+"use Client"
 import About from "@/components/About";
 import Image from "next/image";
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"; 
 import Link from "next/link";
 import TextAnim from '@/components/TextAnim'
+import Project from "@/components/Project";
 
 
 
@@ -45,7 +47,8 @@ export default function Home() {
        
         <About/>
         <TextAnim/>
-        
+        <About/>
+        <Project/>
     </main>
   );
 }
