@@ -24,10 +24,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+Link:hover{
+  scale: 1.1;
+  opacity: 0.5;
+}
 
 body {
   
-  /* background-color: rgb(232 232 227 / var(--tw-bg-opacity)); */
+   background-color: white; 
 }
 .nav_logo{
   @apply font-bold text-lg 
@@ -67,7 +71,8 @@ body {
 
 
 .nav_link{
-  display:inline
+  display:inline;
+  background-color: #e37272;
 }
 .linkedin_svg {
   border-radius: 70%; /* Adjust the percentage for desired roundness */
@@ -103,7 +108,7 @@ h1 {
 .about2_container {
 	width: 100%;
 	border-radius: 40px 40px 0 0;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 .text_colored{
   color: rgb(126, 78, 53);
@@ -118,6 +123,7 @@ h1 {
 	gap: var(--cardMargin);
 	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
 	margin-bottom: var(--cardMargin);
+  
 }
 
 #card1 {
@@ -137,17 +143,23 @@ h1 {
 	position: sticky;
 	top: 0;
 	padding-top: calc(var(--index) * var(--cardTopPadding));
+  
 }
 
 #card1 .card-body {
-	background-color: #000000;
+	background-color: #ffffff;
+  background-image: radial-gradient(at 57% 23%, #22577A 0px, transparent 50%),radial-gradient(at 11% 42%, #38A3A5 0px, transparent 50%),radial-gradient(at 80% 72%, #57CC99 0px, transparent 50%),radial-gradient(at 0% 91%, #38A3A5 0px, transparent 50%),radial-gradient(at 83% 97%, #80ED99 0px, transparent 50%),radial-gradient(at 0% 0%, #57CC99 0px, transparent 50%);
 }
 #card2 .card-body {
 	/* background-color: #7EC4CF; */
-	background-color: #000000;
+	background-color: #ffffff;
+  background-image: radial-gradient(at 40% 20%, #F75C03 0px, transparent 50%),radial-gradient(at 80% 0%, #820263 0px, transparent 50%),radial-gradient(at 0% 50%, #F75C03 0px, transparent 50%),radial-gradient(at 80% 50%, #D90368 0px, transparent 50%),radial-gradient(at 0% 100%, #820263 0px, transparent 50%),radial-gradient(at 80% 100%, #D90368 0px, transparent 50%),radial-gradient(at 0% 0%, #820263 0px, transparent 50%);
+  
 }
 #card3 .card-body {
-	background-color: #000000;
+	background-color: #f4f4f4;
+  background-image: radial-gradient(at 57% 23%, #22577A 0px, transparent 50%),radial-gradient(at 11% 42%, #38A3A5 0px, transparent 50%),radial-gradient(at 80% 72%, #57CC99 0px, transparent 50%),radial-gradient(at 0% 91%, #38A3A5 0px, transparent 50%),radial-gradient(at 83% 97%, #80ED99 0px, transparent 50%),radial-gradient(at 0% 0%, #57CC99 0px, transparent 50%);
+  
 }
 
 
@@ -155,17 +167,18 @@ h1 {
 	box-sizing: border-box;
 	padding: 30px 5px;
 
-	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 5px 0 rgba(114, 114, 114, 0.3);
 	height: var(--cardHeight);
 	
 	/* justify-content: center; */
 	/* align-items: center; */
 	transition: all 0.5s;
-  margin: 0 40px;
-  border-top: 0.5px solid rgb(89, 89, 89);
+  margin: 0 20px;
+  border-top: 0.5px solid rgba(89, 89, 89, 0.159);
+  border-radius: 20px;
 }
 #card4 .card-body {
-	background-color: #000000;
+	background-color: #ffffff;
   height:400px
 }
 
@@ -213,3 +226,347 @@ line-height: 100%;
 flex:3;}
 .project div:last-child {
 flex: 1;}
+
+/*about */
+.main {
+    height: 100vh;
+}
+
+.main .mask,
+.main .body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 20px;
+    line-height: 66px;
+    cursor: default;
+}
+
+.main .mask p,
+.main .body p {
+    width: 1000px;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.main .body span {
+    color: rgb(59 130 246 );
+}
+
+.main .mask {
+    mask-image: url('../public/mask.svg');
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    background: #ec4e39;
+    position: absolute;
+    color: black;
+}
+
+/*PROJECTS*/
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px 50px 100px;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project:last-of-type {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.project:hover {
+  opacity: 0.5;
+}
+
+.project:hover h2 {
+  transform: translateX(-10px);
+}
+
+.project:hover p {
+  transform: translateX(10px);
+}
+
+.project h2 {
+  font-size: 60px;
+  margin: 0px;
+  font-weight: 400;
+  transition: all 0.4s;
+}
+
+.project p {
+  transition: all 0.4s;
+  font-weight: 300;
+}
+.modalContainer{
+  height: 350px;
+  width: 400px;
+  position: absolute;
+  background-color: white;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalSlider{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img{
+  height: auto;
+}
+
+.cursor, .cursorLabel{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(59 130 246 / 0.5);
+  color: white;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.cursorLabel{
+  background-color: transparent;
+}
+.cv_link{
+ margin-top: 15px;
+ border: 2px solid rgb(0, 0, 0);
+ 
+
+}
+/*Contact*/
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin: 0px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 00px 0;
+}
+
+h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #000000;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #000000;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #000000;
+	color: #000000;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #000000;
+  color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
