@@ -1,5 +1,4 @@
-
-"use Client"
+"use client"
 import Intro from "@/components/Intro";
 import Image from "next/image";
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -10,13 +9,33 @@ import Project from "@/components/Projects";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-
+import { useEffect, useState } from 'react'
+import { AnimatePresence } from 'framer-motion';
+import Preloader from '../components/Preloader';
 
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+
+          setTimeout( () => {
+            setIsLoading(false);
+            document.body.style.cursor = 'default'
+            window.scrollTo(0,0);
+          }, 4000)
+      }
+    )()
+  }, [])
   return (
     <main>
-      
+      <AnimatePresence mode='wait'>
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       <div className="hero_section">
       <div style={{ }} className=" text-5xl md:text-8xl sm:text-9xl text-black mt-48 ">
         HI THERE,IM <br/>BENYAHDOU MED
@@ -50,7 +69,7 @@ export default function Home() {
        
        {/* <Intro/>  */}
         <About/>
-        <TextAnim/> 
+        {/* <TextAnim/>  */}
         {/* <About/> */}
         <Project/>
         <Contact/>

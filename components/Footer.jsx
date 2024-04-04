@@ -41,11 +41,11 @@ const Logos = ({scrollProgress}) => {
         <div className="h-[250px] flex flex-row gap-96 justify-center  bg-black overflow-hidden">
             <motion.div style={{y}} className="h-full pl-4 flex-center bg-black flex flex-col  gap-1 ">
                  
-                 <div className='font-semibold  pt-5 mb-3 text-xl text-white border-b-2'>Navigation</div>
-                 <Link href="/Home" className='font-light  text-xl text-white'>Home</Link>
-                 <Link href="/about" className='font-light  text-xl text-white'>About</Link>
-                 <Link href="/project" className='font-light  text-xl text-white'>Project</Link>
-                 <Link href="/contact" className='font-light  text-xl text-white'>Contact</Link>
+                 <div className='font-semibold  pt-5 mb-3 text-xl text-white border-b-2'>NAVIGATION</div>
+                 <Link href="/Home" className='footer_link'>Home</Link>
+                 <Link href="/about" className='footer_link'>About</Link>
+                 <Link href="/project" className='footer_link'>Project</Link>
+                 <Link href="/contact" className='footer_link'>Contact</Link>
                  
 
             </motion.div>
@@ -53,10 +53,10 @@ const Logos = ({scrollProgress}) => {
             <motion.div style={{y}} className="h-full pl-4 flex-center bg-black flex flex-col gap-1   ">
                  
                  <div className='font-semibold  pt-5 mb-3 text-xl text-white border-b-2'>SOCIALS</div>
-                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='font-light  text-xl text-white'>Github</Link>
-                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='font-light  text-xl text-white'>Linkedin</Link>
-                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='font-light  text-xl text-white'>Facebook</Link>
-                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='font-light  text-xl text-white'>Instagram</Link>
+                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='footer_link'>Github</Link>
+                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='footer_link'>Linkedin</Link>
+                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='footer_link'>Facebook</Link>
+                 <Link href='/https://www.facebook.com/benyahdou.mohamed.1/' className='footer_link'>Instagram</Link>
                  
 
             </motion.div>
