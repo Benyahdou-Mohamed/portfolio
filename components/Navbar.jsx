@@ -20,18 +20,18 @@ const Navbar = () => {
           transition={{  }} // Transition duration
           >
             
-             <Link href="/home" className='nav_link'>
+             <Link href="#home" className='nav_link'>
                Home
             </Link>
             </motion.div>
-            <Link className='nav_link' href="/home">
+            <Link className='nav_link' href="#about">
               About
              </Link>
              <div className="">
-        <Link className='nav_link gap-4 mr-4' href="/home">
+        <Link className='nav_link gap-4 mr-4' href="#project">
               Project
             </Link>
-    <Link className='nav_link_button  text-white rounded-full px-3 py-2' href="/home">
+    <Link className='nav_link_button  text-white rounded-full px-3 py-2' href="#contact">
               Contact
             </Link>
             </div>

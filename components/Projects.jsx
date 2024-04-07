@@ -5,24 +5,29 @@ import Modal from '@/components/Modal';
 
 const projects = [
   {
-    title: "C2 Montreal",
-    src: "c2montreal.png",
-    color: "#000000"
+    title: "Roadio",
+    src: "car_app.png",
+    color: "#000000",
+    link:"https://promt-genuiss-fawn.vercel.app/",
+    link:"https://car-rent-gbav.vercel.app/"
   },
   {
-    title: "Office Studio",
-    src: "officestudio.png",
-    color: "#8C8C8C"
+    title: "Bodyscape",
+    src: "gym_app.png",
+    color: "#8C8C8C",
+    link:"https://gym-app2-sandy.vercel.app/"
   },
   {
-    title: "Locomotive",
-    src: "locomotive.png",
-    color: "#EFE8D3"
+    title: "Finch",
+    src: "bank_app.png",
+    color: "#EFE8D3",
+    link:"https://bank-app-flame-delta.vercel.app/"
   },
   {
-    title: "Silencio",
-    src: "silencio.png",
-    color: "#706D63"
+    title: "PromptGenuis",
+    src: "prompt_app.png",
+    color: "#706D63",
+    link:"https://promt-genuiss-fawn.vercel.app/"
   }
 ]
 
@@ -31,17 +36,17 @@ const projects = [
   const [modal, setModal] = useState({active: false, index: 0})
 
   return (
-  <main className="mb-28">
+  <section id='project' className="mb-28">
     <div className='font-semibold  px-5 pb-12 text-7xl'>Projects</div>
     <div className="">
       {
         projects.map( (project, index) => {
-          return <Project index={index} title={project.title} setModal={setModal} key={index}/>
+          return <Project index={index} title={project.title} link={project.link} setModal={setModal} key={index}/>
         })
       }
     </div>
     <Modal modal={modal} projects={projects}/>
-  </main>
+  </section>
   )
 }
 

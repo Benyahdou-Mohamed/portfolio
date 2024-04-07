@@ -43,24 +43,28 @@ export default function index({modal, projects}) {
   return (
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="modalContainer">
+            
             <div style={{top: index * -100 + "%"}} className="modalSlider">
             {
                 projects.map( (project, index) => {
                 const { src, color } = project
                 return <div className="modal" style={{backgroundColor: color}} key={`modal_${index}`}>
                     <Image 
-                    src={`/images/${src}`}
-                    width={300}
-                    height={0}
+                    src={`/${src}`}
+                    width={400}
+                    height={400}
                     alt="image"
                     />
                 </div>
                 })
             }
             </div>
+            
         </motion.div>
         <motion.div ref={cursor} className="cursor" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
+        
         <motion.div ref={cursorLabel} className="cursorLabel" variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
+        
     </>
   )
 }

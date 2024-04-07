@@ -32,7 +32,7 @@ export default function Home() {
     )()
   }, [])
   return (
-    <main>
+    <main id="home">
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
@@ -69,7 +69,7 @@ export default function Home() {
        
        {/* <Intro/>  */}
         <About/>
-        {/* <TextAnim/>  */}
+         {/* <TextAnim/>   */}
         {/* <About/> */}
         <Project/>
         <Contact/>

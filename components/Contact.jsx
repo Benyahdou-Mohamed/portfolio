@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='mx-12 mb-36'>
+    <section id='contact' className='mx-12 mb-36'>
         <div className="flex justify-center items-center text-[70px] font-bold mb-28 ">
                 Contact
         </div>
@@ -68,7 +68,7 @@ const Contact = () => {
 
         </div>
     
-    </div>
+    </section>
   )
 }
 
