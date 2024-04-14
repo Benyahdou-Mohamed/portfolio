@@ -65,7 +65,7 @@ const About = () => {
         <div className="flex flex-col sm:flex-row mx-12 mb-40">
             <div className="pr-8">
                 <div className='font-bold text-[2rem]'>
-                    HELLO WORLD
+                    
                 my digital tool box.
 
                 </div>
