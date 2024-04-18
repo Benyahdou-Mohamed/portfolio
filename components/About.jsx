@@ -65,9 +65,7 @@ const About = () => {
         <div className="flex flex-col sm:flex-row mx-12 mb-40">
             <div className="pr-8">
                 <div className='font-bold text-[2rem]'>
-                    
-                my digital tool box.
-                my digital tool box.
+                 my digital tool box.
                 </div>
                 <div className="flex text-[1.1rem]">
                 These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons.
