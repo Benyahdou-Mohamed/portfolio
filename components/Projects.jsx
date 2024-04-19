@@ -6,14 +6,14 @@ import Modal from '@/components/Modal';
 const projects = [
   {
     title: "FOLIO",
-    src: "car_app.png",
+    src: "books.png",
     color: "#000000",
     link:"https://booksshop15487.000webhostapp.com/home.php",
     stack:'Php,Html,Css,JavaScript, Mysql'
   },
   {
     title: "MIRAI",
-    src: "car_app.png",
+    src: "ecommerce.png",
     color: "#000000",
     link:"https://ecommerceshop20145.000webhostapp.com/home.php",
     stack:'Php,Html,Css,JavaScript, Mysql'
